@@ -6,6 +6,10 @@
 
         <title>Laravel</title>
 
+        <strong>Success!</strong>
+        <strong>Warning!</strong>
+        <strong>Danger!</strong>
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
