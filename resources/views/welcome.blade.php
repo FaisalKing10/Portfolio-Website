@@ -8,7 +8,6 @@
 
         <strong>Success!</strong>
         <strong>Warning!</strong>
-        <strong>Danger!!</strong>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
