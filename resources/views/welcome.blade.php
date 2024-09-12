@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Portfolio Creator</title>
-        <link rel="stylesheet" href="/home/ubuntu/portfolio-website/resources/css/app.css">
+        <link rel="stylesheet" href="style.css">
 
         @livewireStyles
     </head>
 
 
-    <body class="antialiased">
+    <body>
         <!-- Include Livewire Component -->
         <livewire:Portfolio-Component />
         @livewireScripts
