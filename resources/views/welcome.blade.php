@@ -1,38 +1,54 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Portfolio Creator</title>
-        <link rel="stylesheet" href="css/style.css">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ config('app.name', 'Laravel') }}</title>
+    
+    <!-- Link to Custom CSS -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <!-- You can also embed custom styles here if preferred -->
+    <style>
+        /* Example of custom styles directly in the HTML */
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Roboto', sans-serif;
+        }
+        .custom-header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header class="custom-header">
+        <h1>Welcome to {{ config('app.name', 'My App') }}</h1>
+    </header>
 
-        @livewireStyles
-    </head>
-
-
-    <body>
-        <!-- Include Livewire Component -->
-        <livewire:Portfolio-Component />
-        @livewireScripts
-
-        <?php
-        echo "WELCOME!";
-        ?>
-
-        <section class="Signup_cred">
-            <div class="auth_container">
-                <form>
-                    E-mail: 
-                    <input class="input_EMAIL" type="text" name="Email"><br>
-                    Passowrd:
-                    <input class="input_pass" type="password">
-                    <br>
-                    <input class="byn_signup" type="button" value="SignUp">
-                    <br>
-                    <input class="btn_login" type="button" value="Login">
-                </form>
-            </div>
-        </section>
-
-    </body>
+    <div class="d-flex flex-column justify-content-center min-vh-100">
+        @yield('content')
+    </div>
+    
+    <!-- Link to Custom JavaScript -->
+    <script src="{{ asset('js/custom-scripts.js') }}"></script>
+    
+    <!-- You can also embed custom scripts here if preferred -->
+    <script>
+        // Example custom JS code
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Custom script loaded.');
+        });
+    </script>
+</body>
 </html>
